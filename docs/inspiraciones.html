@@ -34,6 +34,33 @@
         .texto-upper {
             text-transform: uppercase;
         }
+
+
+        /* Mejoras visuales para el header */
+        header.bg-info {
+            /* Sobreescribe el padding del framework */
+            padding: 2.5rem 1.5rem !important;
+        }
+
+        /* Efecto hover subtil en el badge */
+        header .d-inline-b {
+            transition: all 0.3s ease;
+        }
+
+        header .d-inline-b:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Card con hover */
+        header .card {
+            transition: all 0.3s ease;
+        }
+
+        header .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+        }
     </style>
 </head>
 
@@ -233,8 +260,8 @@
                                     <p class="card-text">
                                         Música, fogatas y el ambiente único de El Tunco bajo las estrellas.
                                     </p>
-                                    <button class="btn btn-dark fw-bold" type="button" data-accion="ir-card"
-                                        data-indice="3" aria-label="Explorar: Sabores del Tunco">
+                                    <button class="btn btn-outline-dark fw-bold mt-2" type="button"
+                                        data-accion="ir-card" data-indice="3" aria-label="Explorar: Dsifrutar noches">
                                         Explorar experiencia &#8594;
                                     </button>
                                 </div>
@@ -260,8 +287,9 @@
                                     <p class="card-text">
                                         Disfruta mariscos frescos y sabores tropicales frente al océano.
                                     </p>
-                                    <button class="btn btn-dark fw-bold" type="button" data-accion="ir-card"
-                                        data-indice="4" aria-label="Explorar: Noches con Música y Playa">
+                                    <button class="btn btn-outline-dark fw-bold mt-2" type="button"
+                                        data-accion="ir-card" data-indice="4"
+                                        aria-label="Explorar: Noches con Música y Playa">
                                         Explorar experiencia &#8594;
                                     </button>
                                 </div>
@@ -285,10 +313,12 @@
                                     </span>
                                     <h2 class="card-title mt-1">Conexión con el Pacífico</h2>
                                     <p class="card-text">
-                                        Descubre la armonía entre el océano, el atardecer y la tranquilidad natural de El Tunco.
+                                        Descubre la armonía entre el océano, el atardecer y la tranquilidad natural de
+                                        El Tunco.
                                     </p>
-                                    <button class="btn btn-dark fw-bold" type="button" data-accion="ir-card"
-                                        data-indice="5" aria-label="Explorar: Relax Frente al Mar">
+                                    <button class="btn btn-outline-dark fw-bold mt-2" type="button"
+                                        data-accion="ir-card" data-indice="5"
+                                        aria-label="Explorar: Relax Frente al Mar">
                                         Explorar experiencia &#8594;
                                     </button>
                                 </div>
