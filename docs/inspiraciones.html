@@ -1,16 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Planes para inspirarte</title>
 
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <style>
+        .vista {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            will-change: opacity, transform;
+        }
+
+        .vista.activa {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .emoji-icono {
+            font-size: 3rem;
+            display: block;
+        }
+
+        .card-menu {
+            min-height: 220px;
+            cursor: pointer;
+        }
+
+        .texto-upper {
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- ═══════════════════════════════════════════
+       NAVBAR
+       Estado menú  → muestra solo "Iniciar"
+       Estado card  → muestra "← Atrás" y "Adelante →"
+       ═══════════════════════════════════════════ -->
     <nav class="navbar--primary" aria-label="Navegación principal">
 
         <a class="nav-brand" href="#" data-accion="menu" aria-label="El Tunco Beach — volver al inicio">
@@ -24,7 +57,6 @@
 
         <ul class="nav-menu" id="nav-opciones" role="list">
 
-            <!-- Solo visible en el menú principal -->
             <li id="nav-li-iniciar" role="listitem">
                 <button class="btn btn-sm btn-light" type="button" data-accion="iniciar"
                     aria-label="Iniciar recorrido de actividades">
@@ -32,25 +64,533 @@
                 </button>
             </li>
 
-            <!-- Solo visibles dentro de una card -->
             <li id="nav-li-atras" class="d-none" role="listitem">
                 <button class="btn btn-sm btn-light" type="button" data-accion="atras"
                     aria-label="Ir a la actividad anterior">
-                    ← Atrás
+                    &#8592; Atrás
                 </button>
             </li>
 
             <li id="nav-li-adelante" class="d-none" role="listitem">
                 <button class="btn btn-sm btn-light" type="button" data-accion="adelante"
                     aria-label="Ir a la siguiente actividad">
-                    Adelante →
+                    Adelante &#8594;
                 </button>
             </li>
 
         </ul>
     </nav>
 
+
+    <!-- ═══════════════════════════════════════════
+       LAYOUT PRINCIPAL
+       ═══════════════════════════════════════════ -->
+    <main class="has-navbar" id="contenido-principal">
+        <div class="container">
+
+
+            <!-- ════════════════════════════════════════
+             VISTA — MENÚ PRINCIPAL
+             ════════════════════════════════════════ -->
+            <section id="vista-menu" class="vista activa pt-2" aria-labelledby="titulo-menu">
+
+                <!-- ── INTRODUCCIÓN ── -->
+                <header class="bg-info p-3 mb-3 text-center br-2">
+
+                    <!-- Badge / chip -->
+                    <div class="mb-2">
+                        <span class="d-inline-b bg-warning fw-bold p-2 br-3 texto-upper">
+                            &#127796; El Tunco &bull; Surf &bull; Playa &bull; Aventuras
+                        </span>
+                    </div>
+
+                    <!-- Título principal — único h1 de la página -->
+                    <h1 id="titulo-menu" class="fs-1 fw-bold text-center mb-2">
+                        6 Formas Inolvidables de Vivir la Playa
+                    </h1>
+
+                    <!-- Descripción en card -->
+                    <div class="card card-warning card-centrada card-sin-footer">
+                        <div class="card-body p-2">
+                            <p class="card-title text-center">Mucho más que arena y olas.</p>
+                            <p class="card-text text-center">
+                                Descubre experiencias diseñadas para aventureros,
+                                amantes del mar, la gastronomía y los atardeceres
+                                mágicos de El Tunco.
+                            </p>
+                        </div>
+                    </div>
+
+                </header>
+
+                <!-- ── GRID DE 6 CARDS ── -->
+                <section aria-label="Actividades disponibles">
+
+                    <div class="row">
+
+                        <!-- CARD 1: Surf -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-2">
+                            <article class="card card-hover card-sin-footer card-menu shadow-lg" role="button"
+                                tabindex="0" data-accion="ir-card" data-indice="0"
+                                aria-label="Ver actividad: Domina las Olas de El Tunco">
+
+                                <!-- Aquí sustituimos el div del emoji por un contenedor de imagen -->
+                                <div class="card-img-top-wrapper"
+                                    style="height: 180px; overflow: hidden; position: relative;">
+                                    <img src="/img/img1-insp.jpeg" alt="Surfista en las olas de El Tunco"
+                                        style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+
+                                <div class="card-body text-center p-3"> <!-- Aumenté un poco el padding aquí -->
+                                    <span class="d-inline-block bg-info fw-bold px-2 py-1 br-1 mb-2 texto-upper fs-6">
+                                        Surf Legendario
+                                    </span>
+                                    <h2 class="card-title mt-1 h4">Domina el Pacífico</h2>
+                                    <p class="card-text text-muted">
+                                        Olas de clase mundial te esperan. Vive la adrenalina de surfear en El Tunco, con
+                                        instructores expertos.
+                                    </p>
+                                    <button class="btn btn-outline-dark fw-bold mt-2" type="button"
+                                        data-accion="ir-card" data-indice="0" aria-label="Explorar: Domina el Pacífico">
+                                        Empezar ahora &#8594;
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- CARD 2: Atardecer -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-2">
+                            <article class="card card-hover card-sin-footer card-menu shadow-lg" role="button"
+                                tabindex="0" data-accion="ir-card" data-indice="1"
+                                aria-label="Ver actividad: Atardeceres de Ensueño">
+                                <div class="bg-accent p-3 text-center">
+                                    <span class="emoji-icono" aria-hidden="true">&#127749;</span>
+                                </div>
+                                <div class="card-body text-center p-2">
+                                    <span class="d-inline-b bg-warning fw-bold p-1 br-1 mb-1 texto-upper fs-3">
+                                        Experiencia #2
+                                    </span>
+                                    <h2 class="card-title mt-1">Atardeceres de Ensueño</h2>
+                                    <p class="card-text">
+                                        Disfruta uno de los cielos más impresionantes
+                                        de la costa salvadoreña.
+                                    </p>
+                                    <button class="btn btn-dark fw-bold" type="button" data-accion="ir-card"
+                                        data-indice="1" aria-label="Explorar: Atardeceres de Ensueño">
+                                        Explorar experiencia &#8594;
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- CARD 3: Aventuras Marinas -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-2">
+                            <article class="card card-hover card-sin-footer card-menu shadow-lg" role="button"
+                                tabindex="0" data-accion="ir-card" data-indice="2"
+                                aria-label="Ver actividad: Aventuras Marinas">
+                                <div class="bg-success p-3 text-center">
+                                    <span class="emoji-icono" aria-hidden="true">&#128032;</span>
+                                </div>
+                                <div class="card-body text-center p-2">
+                                    <span class="d-inline-b bg-warning fw-bold p-1 br-1 mb-1 texto-upper fs-3">
+                                        Experiencia #3
+                                    </span>
+                                    <h2 class="card-title mt-1">Aventuras Marinas</h2>
+                                    <p class="card-text">
+                                        Explora la vida marina y siente la conexión
+                                        con el océano Pacífico.
+                                    </p>
+                                    <button class="btn btn-dark fw-bold" type="button" data-accion="ir-card"
+                                        data-indice="2" aria-label="Explorar: Aventuras Marinas">
+                                        Explorar experiencia &#8594;
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- CARD 4: Sabores del Tunco -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-2">
+                            <article class="card card-hover card-sin-footer card-menu shadow-lg" role="button"
+                                tabindex="0" data-accion="ir-card" data-indice="3"
+                                aria-label="Ver actividad: Sabores del Tunco">
+                                <div class="bg-primary p-3 text-center">
+                                    <span class="emoji-icono" aria-hidden="true">&#127790;</span>
+                                </div>
+                                <div class="card-body text-center p-2">
+                                    <span class="d-inline-b bg-success fw-bold p-1 br-1 mb-1 texto-upper fs-3">
+                                        Experiencia #4
+                                    </span>
+                                    <h2 class="card-title mt-1">Sabores del Tunco</h2>
+                                    <p class="card-text">
+                                        Descubre comida típica, mariscos frescos y
+                                        bebidas tropicales frente al mar.
+                                    </p>
+                                    <button class="btn btn-dark fw-bold" type="button" data-accion="ir-card"
+                                        data-indice="3" aria-label="Explorar: Sabores del Tunco">
+                                        Explorar experiencia &#8594;
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- CARD 5: Noches con Música -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-2">
+                            <article class="card card-hover card-sin-footer card-menu shadow-lg" role="button"
+                                tabindex="0" data-accion="ir-card" data-indice="4"
+                                aria-label="Ver actividad: Noches con Música y Playa">
+                                <div class="bg-secondary p-3 text-center">
+                                    <span class="emoji-icono" aria-hidden="true">&#127926;</span>
+                                </div>
+                                <div class="card-body text-center p-2">
+                                    <span class="d-inline-b bg-warning fw-bold p-1 br-1 mb-1 texto-upper fs-3">
+                                        Experiencia #5
+                                    </span>
+                                    <h2 class="card-title mt-1">Noches con Música y Playa</h2>
+                                    <p class="card-text">
+                                        Vive el ambiente nocturno de El Tunco
+                                        entre música y energía tropical.
+                                    </p>
+                                    <button class="btn btn-dark fw-bold" type="button" data-accion="ir-card"
+                                        data-indice="4" aria-label="Explorar: Noches con Música y Playa">
+                                        Explorar experiencia &#8594;
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- CARD 6: Relax -->
+                        <div class="col-12 col-md-6 col-lg-4 mb-2">
+                            <article class="card card-hover card-sin-footer card-menu shadow-lg" role="button"
+                                tabindex="0" data-accion="ir-card" data-indice="5"
+                                aria-label="Ver actividad: Relax Frente al Mar">
+                                <div class="bg-info p-3 text-center">
+                                    <span class="emoji-icono" aria-hidden="true">&#127796;</span>
+                                </div>
+                                <div class="card-body text-center p-2">
+                                    <span class="d-inline-b bg-warning fw-bold p-1 br-1 mb-1 texto-upper fs-3">
+                                        Experiencia #6
+                                    </span>
+                                    <h2 class="card-title mt-1">Relax Frente al Mar</h2>
+                                    <p class="card-text">
+                                        Relájate bajo las palmeras mientras
+                                        disfrutas la brisa marina.
+                                    </p>
+                                    <button class="btn btn-dark fw-bold" type="button" data-accion="ir-card"
+                                        data-indice="5" aria-label="Explorar: Relax Frente al Mar">
+                                        Explorar experiencia &#8594;
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div><!-- /row -->
+
+                </section>
+
+            </section><!-- /vista-menu -->
+
+
+            <!-- ════════════════════════════════════════
+             VISTAS DE DETALLE (placeholders)
+             Se completarán en los siguientes pasos.
+             ════════════════════════════════════════ -->
+            <section id="vista-card-1" class="vista d-none my-3 mt-3" aria-labelledby="titulo-card-1">
+                <div class="card shadow-lg br-1 border-0" style="overflow: hidden;">
+
+                    <div style="height: 300px; background-color: #e9ecef; overflow: hidden;" class="mb-4 shadow-sm">
+                        <img src="/img/img2-insp.jpeg" alt="Persona surfeando en El Tunco"
+                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <div class="card-body p-4 p-md-5">
+                        <h2 id="titulo-card-1" class="fs-1 fw-bold text-center mb-2">Domina el Pacífico en El Tunco</h2>
+                        <p class="text-center fs-5 mb-5" style="max-width: 800px; margin: 0 auto; color: #555;">
+                            El Tunco no es solo una playa, es el epicentro del surf en Centroamérica.
+                            El escenario perfecto tanto para tu primera ola como para perfeccionar tu técnica.
+                        </p>
+
+                        <div style="max-width: 1000px; margin: 0 auto;">
+
+                            <div class="row mt-3">
+
+                                <div class="col-12 col-md-6 mb-4 br-3 shadow-sm text-center">
+
+                                    <div style="height: 200px; background-color: #e9ecef; overflow: hidden;"
+                                        class="br-1 mb-3 shadow-sm">
+                                        <img src="/img/img3-insp.jpeg" alt="Instructores de surf"
+                                            style="width: 100%; height: 100%; max-width: 100%; object-fit: cover; object-position: center top; display: block;">
+                                    </div>
+
+                                    <h3 class="fs-4 fw-bold mb-3">¿Por qué elegir El Tunco?</h3>
+                                    <div class="d-inline-block text-start fs-5"
+                                        style="max-width: 400px; margin: 0 auto;">
+                                        <ul class="list-unstyled mb-0" style="line-height: 1.8;">
+                                            <li>✓ <strong>Olas consistentes:</strong> Perfectas durante todo el año.
+                                            </li>
+                                            <li>✓ <strong>Instructores locales:</strong> Certificados y con años de
+                                                experiencia.</li>
+                                            <li>✓ <strong>Ambiente único:</strong> La mejor vibra bohemia frente al mar.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 mb-4 br-3 shadow-sm text-center">
+
+                                    <div style="height: 200px; background-color: #e9ecef; overflow: hidden;"
+                                        class="br-1 mb-3 shadow-sm">
+                                        <img src="/img/img4-insp.jpeg" alt="Surf al atardecer"
+                                            style="width: 100%; height: 100%; max-width: 100%; object-fit: cover; display: block;">
+                                    </div>
+
+                                    <h3 class="fs-4 fw-bold mb-3">Tu Plan: "Surf & Golden Hour"</h3>
+                                    <p class="fs-5" style="line-height: 1.8; max-width: 400px; margin: 0 auto;">
+                                        Agenda tu clase de 2 horas al atardecer. Termina la sesión cuando el cielo
+                                        se tiñe de naranja y celebra tu primera ola con una bebida fría frente a la
+                                        legendaria Piedra del Tunco.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="text-center mt-3">
+                            <a href="https://surflessonseltunco.com/"
+                                class="btn btn-dark d-inline-block fw-bold px-4 py-2 fs-5"
+                                aria-label="Ir a la página para reservar mi clase" style="text-decoration: none;">
+                                Reservar mi clase ahora &#8594;
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="vista-card-2" class="vista d-none" aria-labelledby="titulo-card-2">
+                <div class="card card-accent p-3">
+                    <h2 id="titulo-card-2" class="fs-2 fw-bold text-center">Atardeceres de Ensueño</h2>
+                    <p class="card-text text-center">Contenido de la experiencia — próximamente.</p>
+                </div>
+            </section>
+
+            <section id="vista-card-3" class="vista d-none" aria-labelledby="titulo-card-3">
+                <div class="card card-success p-3">
+                    <h2 id="titulo-card-3" class="fs-2 fw-bold text-center">Aventuras Marinas</h2>
+                    <p class="card-text text-center">Contenido de la experiencia — próximamente.</p>
+                </div>
+            </section>
+
+            <section id="vista-card-4" class="vista d-none" aria-labelledby="titulo-card-4">
+                <div class="card card-primary p-3">
+                    <h2 id="titulo-card-4" class="fs-2 fw-bold text-center">Sabores del Tunco</h2>
+                    <p class="card-text text-center">Contenido de la experiencia — próximamente.</p>
+                </div>
+            </section>
+
+            <section id="vista-card-5" class="vista d-none" aria-labelledby="titulo-card-5">
+                <div class="card card-secondary p-3">
+                    <h2 id="titulo-card-5" class="fs-2 fw-bold text-center">Noches con Música y Playa</h2>
+                    <p class="card-text text-center">Contenido de la experiencia — próximamente.</p>
+                </div>
+            </section>
+
+            <section id="vista-card-6" class="vista d-none" aria-labelledby="titulo-card-6">
+                <div class="card card-info p-3">
+                    <h2 id="titulo-card-6" class="fs-2 fw-bold text-center">Relax Frente al Mar</h2>
+                    <p class="card-text text-center">Contenido de la experiencia — próximamente.</p>
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+
+
+    <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+    <footer class="bg-dark text-center p-3">
+        <address>
+            <span aria-hidden="true">&#127754;</span>
+            El Tunco Beach &middot; Actividades Turísticas &middot;
+            <a href="tel:+50300000000" aria-label="Llamar a El Tunco Beach">
+                +503 0000-0000
+            </a>
+        </address>
+    </footer>
+
+
     <script src="./main.js"></script>
+
+    <script>
+        'use strict';
+
+        /**
+         * Módulo de navegación entre vistas.
+         * Encapsulado en IIFE para no contaminar el scope global.
+         */
+        (function () {
+
+            /* ─────────────────────────────────────────
+               CONFIGURACIÓN
+               Agrega o modifica los IDs de las vistas
+               de detalle aquí cuando se implementen.
+               ───────────────────────────────────────── */
+            var CARDS = [
+                'vista-card-1',
+                'vista-card-2',
+                'vista-card-3',
+                'vista-card-4',
+                'vista-card-5',
+                'vista-card-6'
+            ];
+            var ID_MENU = 'vista-menu';
+            var TODAS_LAS_VISTAS = [ID_MENU].concat(CARDS);
+
+            /* ─────────────────────────────────────────
+               ESTADO — índice de la card activa
+               -1 significa que estamos en el menú
+               ───────────────────────────────────────── */
+            var indiceActual = -1;
+
+            /* ─────────────────────────────────────────
+               REFERENCIAS AL DOM
+               ───────────────────────────────────────── */
+            var navLiIniciar = document.getElementById('nav-li-iniciar');
+            var navLiAtras = document.getElementById('nav-li-atras');
+            var navLiAdelante = document.getElementById('nav-li-adelante');
+
+            /* ─────────────────────────────────────────
+               ACTUALIZAR BOTONES DEL NAVBAR
+               ───────────────────────────────────────── */
+            function actualizarNavbar() {
+                var enMenu = indiceActual === -1;
+                navLiIniciar.classList.toggle('d-none', !enMenu);
+                navLiAtras.classList.toggle('d-none', enMenu);
+                navLiAdelante.classList.toggle('d-none', enMenu);
+            }
+
+            /* ─────────────────────────────────────────
+               MOSTRAR VISTA POR ID
+               ───────────────────────────────────────── */
+            function mostrarVista(idVista) {
+                /* Ocultar y desactivar todas las vistas */
+                TODAS_LAS_VISTAS.forEach(function (id) {
+                    var seccion = document.getElementById(id);
+                    if (!seccion) return;
+                    seccion.classList.remove('activa');
+                    seccion.classList.add('d-none');
+                });
+
+                /* Mostrar la vista destino */
+                var destino = document.getElementById(idVista);
+                if (!destino) return;
+
+                destino.classList.remove('d-none');
+
+                /* Doble rAF: el navegador procesa el display
+                   antes de iniciar la transición CSS */
+                requestAnimationFrame(function () {
+                    requestAnimationFrame(function () {
+                        destino.classList.add('activa');
+                    });
+                });
+
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+
+            /* ─────────────────────────────────────────
+               NAVEGAR AL MENÚ PRINCIPAL
+               ───────────────────────────────────────── */
+            function irAlMenu() {
+                indiceActual = -1;
+                mostrarVista(ID_MENU);
+                actualizarNavbar();
+            }
+
+            /* ─────────────────────────────────────────
+               NAVEGAR A UNA CARD POR ÍNDICE
+               ───────────────────────────────────────── */
+            function irACard(indice) {
+                indiceActual = indice;
+                mostrarVista(CARDS[indice]);
+                actualizarNavbar();
+            }
+
+            /* ─────────────────────────────────────────
+               MANEJAR ACCIONES
+               ───────────────────────────────────────── */
+            function manejarAccion(accion, elemento) {
+                switch (accion) {
+
+                    case 'menu':
+                        /* Clic en la marca del navbar */
+                        irAlMenu();
+                        break;
+
+                    case 'iniciar':
+                        /* Clic en "Iniciar" → primera card */
+                        irACard(0);
+                        break;
+
+                    case 'ir-card':
+                        /* Clic en una card del menú */
+                        var indice = parseInt(elemento.dataset.indice, 10);
+                        if (!isNaN(indice)) irACard(indice);
+                        break;
+
+                    case 'atras':
+                        /* Primera card → menú; resto → card anterior */
+                        if (indiceActual <= 0) {
+                            irAlMenu();
+                        } else {
+                            irACard(indiceActual - 1);
+                        }
+                        break;
+
+                    case 'adelante':
+                        /* Última card → menú; resto → card siguiente */
+                        if (indiceActual >= CARDS.length - 1) {
+                            irAlMenu();
+                        } else {
+                            irACard(indiceActual + 1);
+                        }
+                        break;
+                }
+            }
+
+            /* ─────────────────────────────────────────
+               DELEGACIÓN DE EVENTOS
+               Un solo listener por tipo en document
+               ───────────────────────────────────────── */
+            function manejarClick(evento) {
+                var objetivo = evento.target.closest('[data-accion]');
+                if (!objetivo) return;
+                evento.preventDefault();
+                manejarAccion(objetivo.dataset.accion, objetivo);
+            }
+
+            function manejarTeclado(evento) {
+                /* Enter o Espacio activan elementos con role="button" */
+                if (evento.key !== 'Enter' && evento.key !== ' ') return;
+                var objetivo = evento.target.closest('[role="button"][data-accion]');
+                if (!objetivo) return;
+                evento.preventDefault();
+                manejarAccion(objetivo.dataset.accion, objetivo);
+            }
+
+            /* ─────────────────────────────────────────
+               INICIALIZACIÓN
+               ───────────────────────────────────────── */
+            document.addEventListener('DOMContentLoaded', function () {
+                actualizarNavbar();
+                document.addEventListener('click', manejarClick);
+                document.addEventListener('keydown', manejarTeclado);
+            });
+
+        })();
+    </script>
 </body>
 
 </html>
