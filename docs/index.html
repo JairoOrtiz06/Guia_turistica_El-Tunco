@@ -1,11 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>El Tunco</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+
+    <style>
+
+        .contenedor{
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .texto{
+            width: 45%;
+        }
+
+        .galeria{
+            width: 50%;
+        }
+
+        .imagen-principal{
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            height: 520px;
+            object-fit: cover;
+        }
+
+        .miniaturas{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .miniaturas img{
+            width: 90px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .miniaturas img:hover{
+            transform: scale(1.05);
+        }
+
+        .card-text{
+            margin-bottom: 25px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        @media(max-width: 900px){
+
+            .texto,
+            .galeria{
+                width: 100%;
+            }
+
+            .imagen-principal{
+                height: auto;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 <body>
-    <h1>Bienvenido a mi pagina</h1>
+
+    <header>
+
+        <nav class="navbar--primary">
+
+            <a href="#inicio" class="nav-brand">
+                El Tunco
+            </a>
+
+            <button class="nav-toggle"
+                    type="button">
+                
+            </button>
+
+            <ul class="nav-menu">
+
+                <li>
+                    <a href="#inicio">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#galeria">Galería</a>
+                </li>
+
+                <li>
+                    <a href="#ubicacion">Ubicación</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <section class="contenedor" id="inicio">
+
+        <div class="texto">
+
+            <h1>
+                El Tunco 
+            </h1>
+
+            <h3>
+              La mejor playa turística de El Salvador
+            </h3>
+
+            <br>
+
+            <p class="card-text">
+                Playa El Tunco es uno de los destinos turísticos
+                más emblemáticos y visitados de El Salvador,
+                reconocido internacionalmente por sus impresionantes
+                olas, su ambiente relajado y su vibrante vida turística.
+            </p>
+
+            <p class="card-text">
+                Con el paso de los años, este destino se ha convertido
+                en uno de los principales lugares para practicar surf
+                en Centroamérica, atrayendo turistas nacionales e
+                internacionales durante todo el año.
+            </p>
+
+            <p class="card-text">
+                Sus hermosos atardeceres, la cercanía con el océano,
+                el ambiente juvenil y la variedad de actividades recreativas
+                hacen de este lugar una experiencia única para quienes desean
+                relajarse y disfrutar de la naturaleza.
+            </p>
+
+            <p class="card-text">
+                Además de sus playas, los visitantes pueden disfrutar
+                de hoteles, restaurantes, cafés, música en vivo y
+                gastronomía típica salvadoreña frente al mar.
+            </p>
+
+            <p class="card-text">
+                El Tunco también es ideal para compartir momentos con amigos,
+                familia y vivir experiencias inolvidables en uno de los
+                destinos turísticos más importantes de El Salvador.
+            </p>
+
+            <p class="card-text" id="ubicacion">
+                Ubicación:
+                La Libertad, El Salvador
+            </p>
+
+            <a href="https://maps.google.com/?q=Playa+El+Tunco+El+Salvador"
+               target="_blank"
+               class="btn-primary btn-md">
+
+                Ver ubicación
+
+            </a>
+
+        </div>
+
+        
+
+        <div class="galeria" id="galeria">
+
+            <img src="../img/el tunco.jpg"
+                 alt="Playa El Tunco"
+                 class="imagen-principal">
+
+            <div class="miniaturas">
+
+                <img src="../img/surfing.jpg"
+                     alt="Miniatura 1">
+
+                <img src="../img/el tunco.jpg"
+                     alt="Miniatura 2">
+
+                <img src="../img/imag3.jpg"
+                     alt="Miniatura 3">
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="../docs/main.js"></script>
+
+    <script>
+
+        const imagenPrincipal =
+            document.querySelector(".imagen-principal");
+
+        const miniaturas =
+            document.querySelectorAll(".miniaturas img");
+
+        miniaturas.forEach((img) => {
+
+            img.addEventListener("click", () => {
+
+                imagenPrincipal.src = img.src;
+
+            });
+
+        });
+
+    </script>
+
 </body>
+
 </html>
