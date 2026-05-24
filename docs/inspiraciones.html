@@ -61,16 +61,14 @@
             transform: translateY(-3px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
         }
+
+        
     </style>
+
 </head>
 
 <body>
 
-    <!-- ═══════════════════════════════════════════
-       NAVBAR
-       Estado menú  → muestra solo "Iniciar"
-       Estado card  → muestra "← Atrás" y "Adelante →"
-       ═══════════════════════════════════════════ -->
     <nav class="navbar--primary" aria-label="Navegación principal">
 
         <a class="nav-brand" href="#" data-accion="menu" aria-label="El Tunco Beach — volver al inicio">
@@ -109,46 +107,56 @@
     </nav>
 
 
-    <!-- ═══════════════════════════════════════════
-       LAYOUT PRINCIPAL
-       ═══════════════════════════════════════════ -->
+    <!-- LAYOUT PRINCIPAL -->
     <main class="has-navbar" id="contenido-principal">
         <div class="container">
 
 
-            <!-- ════════════════════════════════════════
-             VISTA — MENÚ PRINCIPAL
-             ════════════════════════════════════════ -->
+            <!--VISTA — MENÚ PRINCIPAL -->
             <section id="vista-menu" class="vista activa pt-2" aria-labelledby="titulo-menu">
 
+               
                 <!-- ── INTRODUCCIÓN ── -->
-                <header class="bg-info p-3 mb-3 text-center br-2">
+                <header class="hero-intro bg-info p-3 mb-3 text-center br-2">
 
-                    <!-- Badge / chip -->
-                    <div class="mb-2">
-                        <span class="d-inline-b bg-warning fw-bold p-2 br-3 texto-upper">
-                            &#127796; El Tunco &bull; Surf &bull; Playa &bull; Aventuras
+                    <!-- Badge -->
+                    <div class="mb-3">
+                        <span class="hero-badge d-inline-block fw-bold p-2 br-3 texto-upper">
+                            🌊 El Tunco • Surf • Playa • Aventuras
                         </span>
                     </div>
 
-                    <!-- Título principal — único h1 de la página -->
-                    <h1 id="titulo-menu" class="fs-1 fw-bold text-center mb-2">
+                    <!-- Título -->
+                    <h1 id="titulo-menu" class="hero-title fs-1 fw-bold text-center mb-3">
+
                         6 Formas Inolvidables de Vivir la Playa
+
                     </h1>
 
-                    <!-- Descripción en card -->
-                    <div class="card card-warning card-centrada card-sin-footer">
-                        <div class="card-body p-2">
-                            <p class="card-title text-center">Mucho más que arena y olas.</p>
-                            <p class="card-text text-center">
+                    <!-- Sub card -->
+                    <div class="hero-card card card-warning card-centrada card-sin-footer border-0">
+
+                        <div class="card-body p-3">
+
+                            <p class="hero-mini-title card-title text-center mb-2">
+                                Mucho más que arena y olas.
+                            </p>
+
+                            <p class="card-text text-center mb-0">
+
                                 Descubre experiencias diseñadas para aventureros,
                                 amantes del mar, la gastronomía y los atardeceres
                                 mágicos de El Tunco.
+
                             </p>
+
                         </div>
+
                     </div>
 
                 </header>
+              
+
 
                 <!-- ── GRID DE 6 CARDS ── -->
                 <section aria-label="Actividades disponibles">
@@ -554,28 +562,310 @@
                 </div>
             </section>
 
-            <section id="vista-card-4" class="vista d-none" aria-labelledby="titulo-card-4">
-                <div class="card card-primary p-3">
-                    <h2 id="titulo-card-4" class="fs-2 fw-bold text-center">Sabores del Tunco</h2>
-                    <p class="card-text text-center">Contenido de la experiencia — próximamente.</p>
+
+            <section id="vista-card-4" class="vista d-none my-3 mt-3" aria-labelledby="titulo-card-2">
+
+                <div class="card shadow-lg br-1 border-0" style="overflow: hidden;">
+
+                    <div style="height: 300px; overflow: hidden;" class="mb-4 shadow-sm">
+                        <img src="/img/img-4.png" alt="Vida nocturna en El Tunco"
+                            style="width:100%; height:100%; object-fit:cover; display:block;">
+                    </div>
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <h2 id="titulo-card-2" class="fs-1 fw-bold text-center mb-2">
+                            Vive las Noches de El Tunco
+                        </h2>
+
+                        <p class="text-center fs-5 mb-5" style="max-width: 850px; margin:auto; color:#555;">
+                            Cuando cae el sol, El Tunco cobra vida con música,
+                            luces, fogatas y una energía única frente al océano.
+                        </p>
+
+                        <div style="max-width:1000px; margin:auto;">
+
+                            <div class="row mt-3">
+
+                                <div class="col-12 col-md-6 mb-4 br-3 shadow-sm text-center">
+
+                                    <div style="height:200px; overflow:hidden;" class="br-1 mb-3 shadow-sm">
+
+                                        <img src="/img/img-5.png" alt="Bares y música en El Tunco" style="width:100%; height:100%;
+                                object-fit:cover; display:block;">
+                                    </div>
+
+                                    <h3 class="fs-4 fw-bold mb-3">
+                                        Una Experiencia Vibrante
+                                    </h3>
+
+                                    <div class="d-inline-block text-start fs-5" style="max-width:400px; margin:auto;">
+
+                                        <ul class="list-unstyled mb-0" style="line-height:1.9;">
+
+                                            <li> <strong>Música en vivo:</strong>
+                                                Ambientes llenos de energía frente al mar.
+                                            </li>
+
+                                            <li><strong>Fogatas y sunsets:</strong>
+                                                Noches inolvidables junto al Pacífico.
+                                            </li>
+
+                                            <li><strong>Ambiente internacional:</strong>
+                                                Cultura surf y viajeros de todo el mundo.
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-12 col-md-6 mb-4 br-3 shadow-sm text-center">
+
+                                    <div style="height:200px; overflow:hidden;" class="br-1 mb-3 shadow-sm">
+
+                                        <img src="/img/img-6.png" alt="Fogata en la playa" style="width:100%; height:100%;
+                                object-fit:cover; display:block;">
+                                    </div>
+
+                                    <h3 class="fs-4 fw-bold mb-3">
+                                        Tu Plan: "Sunset & Music"
+                                    </h3>
+
+                                    <p class="fs-5" style="line-height:1.8;
+                            max-width:400px; margin:auto;">
+
+                                        Disfruta una caminata al atardecer,
+                                        relájate frente a las fogatas y vive
+                                        la auténtica vibra nocturna de El Tunco.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </section>
 
-            <section id="vista-card-5" class="vista d-none" aria-labelledby="titulo-card-5">
-                <div class="card card-secondary p-3">
-                    <h2 id="titulo-card-5" class="fs-2 fw-bold text-center">Noches con Música y Playa</h2>
-                    <p class="card-text text-center">Contenido de la experiencia — próximamente.</p>
+
+
+
+            <section id="vista-card-5" class="vista d-none my-3 mt-3" aria-labelledby="titulo-card-5">
+
+                <div class="card shadow-lg br-1 border-0" style="overflow: hidden;">
+
+                    <div style="height: 300px; overflow: hidden;" class="mb-4 shadow-sm">
+
+                        <img src="/img/img-7.png" alt="Gastronomía en El Tunco" style="width:100%; height:100%;
+                object-fit:cover; display:block;">
+
+                    </div>
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <h2 id="titulo-card-5" class="fs-1 fw-bold text-center mb-2">
+
+                            Sabores Frente al Pacífico
+
+                        </h2>
+
+                        <p class="text-center fs-5 mb-5" style="max-width: 850px; margin:auto; color:#555;">
+
+                            La gastronomía de El Tunco combina mariscos frescos,
+                            cocina internacional y experiencias únicas frente al océano.
+
+                        </p>
+
+                        <div style="max-width:1000px; margin:auto;">
+
+                            <div class="row mt-3">
+
+                                <!-- Columna izquierda -->
+                                <div class="col-12 col-md-6 mb-4 br-3 shadow-sm text-center">
+
+                                    <div style="height:200px; overflow:hidden;" class="br-1 mb-3 shadow-sm">
+
+                                        <img src="/img/img-8.png" alt="Mariscos frescos" style="width:100%; height:100%;
+                                object-fit:cover; display:block;">
+
+                                    </div>
+
+                                    <h3 class="fs-4 fw-bold mb-3">
+                                        Gastronomía Costera
+                                    </h3>
+
+                                    <div class="d-inline-block text-start fs-5" style="max-width:400px; margin:auto;">
+
+                                        <ul class="list-unstyled mb-0" style="line-height:1.9;">
+
+                                            <li>
+                                                <strong>Mariscos frescos:</strong>
+                                                Preparados con auténtico sabor del Pacífico.
+                                            </li>
+
+                                            <li>
+                                                <strong>Ambientes tropicales:</strong>
+                                                Restaurantes frente al mar con vistas increíbles.
+                                            </li>
+
+                                            <li>
+                                                <strong>Experiencia internacional:</strong>
+                                                Opciones gastronómicas para todos los gustos.
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Columna derecha -->
+                                <div class="col-12 col-md-6 mb-4 br-3 shadow-sm text-center">
+
+                                    <div style="height:200px; overflow:hidden;" class="br-1 mb-3 shadow-sm">
+
+                                        <img src="/img/img-9.png" alt="Cena frente al mar" style="width:100%; height:100%;
+                                object-fit:cover; display:block;">
+
+                                    </div>
+
+                                    <h3 class="fs-4 fw-bold mb-3">
+                                        Tu Plan: "Dinner Sunset"
+                                    </h3>
+
+                                    <p class="fs-5" style="line-height:1.8;
+                            max-width:400px; margin:auto;">
+
+                                        Disfruta una cena frente al océano
+                                        mientras el atardecer transforma
+                                        cada momento en una experiencia inolvidable.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </section>
 
-            <section id="vista-card-6" class="vista d-none" aria-labelledby="titulo-card-6">
-                <div class="card card-info p-3">
-                    <h2 id="titulo-card-6" class="fs-2 fw-bold text-center">Relax Frente al Mar</h2>
-                    <p class="card-text text-center">Contenido de la experiencia — próximamente.</p>
+            <section id="vista-card-6" class="vista d-none my-3 mt-3" aria-labelledby="titulo-card-6">
+
+                <div class="card shadow-lg br-1 border-0" style="overflow: hidden;">
+
+                    <div style="height: 300px; overflow: hidden;" class="mb-4 shadow-sm">
+
+                        <img src="/img/img-10.png" alt="Paisajes naturales de El Tunco" style="width:100%; height:100%;
+                object-fit:cover; display:block;">
+
+                    </div>
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <h2 id="titulo-card-6" class="fs-1 fw-bold text-center mb-2">
+
+                            Conexión con el Pacífico
+
+                        </h2>
+
+                        <p class="text-center fs-5 mb-5" style="max-width: 850px; margin:auto; color:#555;">
+
+                            Descubre la tranquilidad de El Tunco a través
+                            de paisajes naturales, atardeceres dorados
+                            y momentos únicos frente al océano.
+
+                        </p>
+
+                        <div style="max-width:1000px; margin:auto;">
+
+                            <div class="row mt-3">
+
+                                <!-- Columna izquierda -->
+                                <div class="col-12 col-md-6 mb-4 br-3 shadow-sm text-center">
+
+                                    <div style="height:200px; overflow:hidden;" class="br-1 mb-3 shadow-sm">
+
+                                        <img src="/img/img-11.png" alt="Naturaleza y mar en El Tunco" style="width:100%; height:100%;
+                                object-fit:cover; display:block;">
+
+                                    </div>
+
+                                    <h3 class="fs-4 fw-bold mb-3">
+                                        Naturaleza y Serenidad
+                                    </h3>
+
+                                    <div class="d-inline-block text-start fs-5" style="max-width:400px; margin:auto;">
+
+                                        <ul class="list-unstyled mb-0" style="line-height:1.9;">
+
+                                            <li>
+                                                <strong>Atardeceres únicos:</strong>
+                                                Escenarios naturales llenos de color y calma.
+                                            </li>
+
+                                            <li>
+                                                <strong>Ambiente costero:</strong>
+                                                Espacios ideales para desconectarte y respirar.
+                                            </li>
+
+                                            <li>
+                                                <strong>Vista al océano:</strong>
+                                                Una experiencia auténtica junto al Pacífico.
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                                <!-- Columna derecha -->
+                                <div class="col-12 col-md-6 mb-4 br-3 shadow-sm text-center">
+
+                                    <div style="height:200px; overflow:hidden;" class="br-1 mb-3 shadow-sm">
+
+                                        <img src="/img/img-12.png" alt="Atardecer en la playa" style="width:100%; height:100%;
+                                object-fit:cover; display:block;">
+
+                                    </div>
+
+                                    <h3 class="fs-4 fw-bold mb-3">
+                                        Tu Plan: "Pacific Escape"
+                                    </h3>
+
+                                    <p class="fs-5" style="line-height:1.8;
+                            max-width:400px; margin:auto;">
+
+                                        Camina junto al mar, disfruta
+                                        la brisa del océano y vive
+                                        una experiencia de tranquilidad
+                                        en uno de los destinos más icónicos
+                                        de la costa salvadoreña.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </section>
-
-
         </div>
     </main>
 
