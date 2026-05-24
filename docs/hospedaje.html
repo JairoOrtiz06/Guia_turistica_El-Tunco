@@ -7,16 +7,61 @@
     <title>Donde Dormir</title>
   </head>
   <body>
-    <nav class="navbar--dark">
-      <span class="fw-bold fs-3">El Tunco</span>
-      <button class="nav-toggle" aria-label="Menú">☰</button>
+    
+    <nav class="navbar-underline--dark">
+      <h3 class="nav-brand">
+        Guía Turística <span class="badge info">El Salvador</span>
+      </h3>
+      <button class="nav-toggle">☰</button>
       <ul class="nav-menu">
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="introduccion.html" class="active">Documentación</a></li>
-        <li><a href="colaboradoras.html">Colaboradoras</a></li>
+        <li><a href="#" class="text-dark"><b>Inicio</b></a></li>
       </ul>
     </nav>
-    <main class="container p-3">
+
+ <div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="main-wrapper has-navbar">
+  <aside class="sidebar-main sidebar-info" id="sidebar">
+    <div class="sidebar-header">
+      <span class="text-dark">Playa El Tunco</span>
+      <br />
+      <small class="text-dark">ZONA LA LIBERTAD</small>
+    </div>
+    <ul class="sidebar-menu">
+      <li>
+        <a href="descripcion.html">
+          <small class="text-dark">01.</small> Descripción
+        </a>
+      </li>
+      <li>
+        <a href="dondeComer.htm">
+          <small class="text-dark">02.</small> <b>¿Dónde comer?</b>
+        </a>
+      </li>
+      <li>
+        <a href="hospedaje.html">
+          <small class="text-dark">03.</small> ¿Dónde dormir?
+        </a>
+      </li>
+      <li>
+        <a href="lugares_cercanos.html">
+          <small class="text-dark">03.</small> Lugares Cercanos
+        </a>
+      </li>
+      <li>
+        <a href="comollegar.html" class="active fw-bold">
+          <small class="text-dark">04.</small> ¿Cómo llegar?
+        </a>
+      </li>
+        <li>
+        <a href="inspiraciones.html">
+          <small class="text-dark">04.</small> Inspiraciones
+        </a>
+      </li>
+    </ul>
+  </aside>
+    <button class="sidebar-toggle-btn" id="sidebarToggle">☰</button>
+
+    <main class="main-content">
       <h1 class="text-center">Hospedajes Cercanos</h1>
       <div class="row mt-2">
         <div class="col-12 col-md-4">
@@ -217,7 +262,7 @@
             <div class="card-footer d-flex justify-content-center gap-1">
                 <img src="/img/mobile.png" alt="internet" width="30" />
                 <p>7924-0227</p>
-              </a>
+              
             </div>
           </div>
         </div>
@@ -248,6 +293,15 @@
           </div>
         </div>
       </div>
+      <footer class="main-footer main-footer-dark">
+          <div class="footer-content">
+            <span class="footer-brand">El Tunco Guide</span>
+            <p class="footer-copy text-muted">
+              © 2026 Guía Turística Playa El Tunco.
+            </p>
+          </div>
+        </footer>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
