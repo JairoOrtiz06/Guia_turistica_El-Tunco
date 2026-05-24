@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/main.css" />
     <title>Donde Dormir</title>
+    <style>
+      .portada
+      {
+        height: 450px;
+        background-image: url(/img/surf\ \(2\).jpg) ;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        
+            
+      }
+      .portada>h1
+      {
+        line-height: 12;
+        
+      }
+    </style>
   </head>
   <body>
     
@@ -62,7 +80,11 @@
     <button class="sidebar-toggle-btn" id="sidebarToggle">☰</button>
 
     <main class="main-content">
-      <h1 class="text-center">Hospedajes Cercanos</h1>
+      <div class="portada">
+         <h1 class="text-center">Hospedajes Cercanos</h1>
+      </div>
+      
+      
       <div class="row mt-2">
         <div class="col-12 col-md-4">
           <div class="card card-img-top card-hover">
