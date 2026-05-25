@@ -145,4 +145,5 @@ document.addEventListener("DOMContentLoaded", () => {
             if (alerta) alerta.remove();
         }
     });
+    
 });
