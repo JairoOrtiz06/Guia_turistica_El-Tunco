@@ -90,14 +90,15 @@ if (sidebar && sidebarToggleBtn) {
   sidebarToggleBtn.addEventListener("click", () => {
     sidebar.classList.toggle("is-open");
     sidebarToggleBtn.classList.toggle("is-open");
-    if (sidebarOverlay) sidebarOverlay.classList.toggle("is-active");
+   // if (sidebarOverlay) sidebarOverlay.classList.toggle("is-active");
   });
 
   if (sidebarOverlay) {
     sidebarOverlay.addEventListener("click", () => {
       sidebar.classList.remove("is-open");
       sidebarToggleBtn.classList.remove("is-open");
-      sidebarOverlay.classList.remove("is-active");
+     // sidebarOverlay.classList.remove("is-active");
     });
   }
+  
 }
