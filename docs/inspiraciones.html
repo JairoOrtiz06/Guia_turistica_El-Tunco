@@ -67,18 +67,6 @@
 
 <body>
 
-    <nav class="navbar-underline--dark">
-      <h3 class="nav-brand">
-        Guía Turística <span class="badge info">El Salvador</span>
-      </h3>
-      <button class="nav-toggle">☰</button>
-      <ul class="nav-menu">
-        <li>
-          <a href="#" class="text-dark"><b>Inicio</b></a>
-        </li>
-      </ul>
-    </nav>
-
     <nav class="navbar-underline--dark" aria-label="Navegación principal">
 
         <h3 class="nav-brand">
@@ -118,7 +106,56 @@
 
 
     <!-- LAYOUT PRINCIPAL -->
-    <main class="has-navbar" id="contenido-principal">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="main-wrapper has-navbar">
+        <aside class="sidebar-main sidebar-info" id="sidebar">
+        <div class="sidebar-header">
+          <span class="text-dark"><b>Playa El Tunco</b></span>
+          <br />
+          <small class="text-dark"><b>ZONA LA LIBERTAD</b></small>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="index.html">
+              <small class="text-dark">01.</small> Descripción
+            </a>
+          </li>
+          <li>
+            <a href="dondeComer.html">
+              <small class="text-dark">02.</small> ¿Dónde comer?
+            </a>
+          </li>
+          <li>
+            <a href="hospedaje.html">
+              <small class="text-dark">03.</small> ¿Dónde dormir?
+            </a>
+          </li>
+          <li>
+            <a href="lugares_cercanos.html" class="active">
+              <small class="text-dark">04.</small><b> Lugares Cercanos</b>
+            </a>
+          </li>
+          <li>
+            <a href="comollegar.html">
+              <small class="text-dark">05.</small> ¿Cómo llegar?
+            </a>
+          </li>
+          <li>
+            <a href="inspiraciones.html">
+              <small class="text-dark">06.</small> Inspiraciones
+            </a>
+          </li>
+          <li>
+            <a href="lugares.html">
+              <small >07.</small>Más Lugares para visitar
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <button class="sidebar-toggle-btn" id="sidebarToggle">☰</button>
+
+    <main class="main-content" id="contenido-principal">
         <div class="container">
 
 
@@ -130,7 +167,7 @@
 
                     <div class="mb-2">
                         <span class="d-inline-b bg-light fw-bold p-2 br-3 texto-upper" style="color: #2F332B;">
-                            &#127796; El Tunco &bull; Surf &bull; Playa &bull; Aventuras
+                             El Tunco &bull; Surf &bull; Playa &bull; Aventuras
                         </span>
                     </div>
 
@@ -862,10 +899,9 @@
 
             </section>
         </div>
-    </main>
 
 
-    <footer class="main-footer main-footer-dark">
+        <footer class="main-footer main-footer-dark">
           <div class="footer-content">
             <span class="footer-brand">El Tunco Guide</span>
             <p class="footer-copy text-muted">
@@ -873,6 +909,8 @@
             </p>
           </div>
         </footer>
+    </main>
+    </div>
 
 
     <script src="./main.js"></script>
