@@ -207,54 +207,6 @@
         </main>
     </div>
 
-    <script src="../js/main.js"></script>
-    <script>
-        (function () {
-            var CARDS = ['vista-card-1', 'vista-card-2', 'vista-card-3', 'vista-card-4', 'vista-card-5', 'vista-card-6'];
-            var ID_MENU = 'vista-menu';
-            var TODAS_LAS_VISTAS = [ID_MENU].concat(CARDS);
-            var indiceActual = -1;
-
-            var navLiIniciar = document.getElementById('nav-li-iniciar');
-            var navLiAtras = document.getElementById('nav-li-atras');
-            var navLiAdelante = document.getElementById('nav-li-adelante');
-
-            function actualizarNavbar() {
-                var enMenu = indiceActual === -1;
-                navLiIniciar.classList.toggle('d-none', !enMenu);
-                navLiAtras.classList.toggle('d-none', enMenu);
-                navLiAdelante.classList.toggle('d-none', enMenu);
-            }
-
-            function mostrarVista(idVista) {
-                TODAS_LAS_VISTAS.forEach(function (id) {
-                    var seccion = document.getElementById(id);
-                    if (seccion) {
-                        seccion.classList.remove('activa');
-                        seccion.classList.add('d-none');
-                    }
-                });
-                var destino = document.getElementById(idVista);
-                if (destino) {
-                    destino.classList.remove('d-none');
-                    setTimeout(() => { destino.classList.add('activa'); }, 50);
-                }
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-
-            function irAlMenu() { indiceActual = -1; mostrarVista(ID_MENU); actualizarNavbar(); }
-            function irACard(indice) { indiceActual = indice; mostrarVista(CARDS[indice]); actualizarNavbar(); }
-
-            document.addEventListener('click', function (e) {
-                var btn = e.target.closest('[data-accion]');
-                if (!btn) return;
-                var accion = btn.dataset.accion;
-                if (accion === 'iniciar') irACard(0);
-                if (accion === 'ir-card') irACard(parseInt(btn.dataset.indice));
-                if (accion === 'atras') indiceActual <= 0 ? irAlMenu() : irACard(indiceActual - 1);
-                if (accion === 'adelante') indiceActual >= CARDS.length - 1 ? irAlMenu() : irACard(indiceActual + 1);
-            });
-        })();
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
