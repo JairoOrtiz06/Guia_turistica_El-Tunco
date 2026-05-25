@@ -7,171 +7,152 @@
     <title>Lugares a Visitar</title>
 </head>
 <body>
-      <nav class="navbar-underline--dark">
+   <nav class="navbar-underline--dark">
       <h3 class="nav-brand">
         Guía Turística <span class="badge info">El Salvador</span>
       </h3>
       <button class="nav-toggle">☰</button>
       <ul class="nav-menu">
-        <li><a href="#" class="text-dark"><b>Inicio</b></a></li>
+        <li>
+          <a href="index.html" class="text-dark"><b>Inicio</b></a>
+        </li>
       </ul>
     </nav>
 
- <div class="sidebar-overlay" id="sidebarOverlay"></div>
-<div class="main-wrapper has-navbar">
-  <aside class="sidebar-main sidebar-info" id="sidebar">
-    <div class="sidebar-header">
-      <span class="text-dark">Playa El Tunco</span>
-      <br />
-      <small class="text-dark">ZONA LA LIBERTAD</small>
-    </div>
-    <ul class="sidebar-menu">
-      <li>
-        <a href="descripcion.html">
-          <small class="text-dark">01.</small> Descripción
-        </a>
-      </li>
-      <li>
-        <a href="dondeComer.htm">
-          <small class="text-dark">02.</small> <b>¿Dónde comer?</b>
-        </a>
-      </li>
-      <li>
-        <a href="hospedaje.html">
-          <small class="text-dark">03.</small> ¿Dónde dormir?
-        </a>
-      </li>
-      <li>
-        <a href="lugares_cercanos.html">
-          <small class="text-dark">04.</small> Lugares Cercanos
-        </a>
-      </li>
-      <li>
-        <a href="comollegar.html" class="active fw-bold">
-          <small class="text-dark">05.</small> ¿Cómo llegar?
-        </a>
-      </li>
-        <li>
-        <a href="inspiraciones.html">
-          <small class="text-dark">06.</small> Inspiraciones
-        </a>
-      </li>
-        <li>
-        <a href="lugares.html">
-          <small class="text-dark">07.</small> Mas Lugares para visitar
-        </a>
-      </li>
-    </ul>
-  </aside>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-      <button class="sidebar-toggle-btn" id="sidebarToggle">☰</button>
+    <div class="main-wrapper has-navbar">
+         <aside class="sidebar-main sidebar-info" id="sidebar">
+        <div class="sidebar-header">
+          <span class="text-dark"><b>Playa El Tunco</b></span>
+          <br />
+          <small class="text-dark"><b>ZONA LA LIBERTAD</b></small>
+        </div>
+        <ul class="sidebar-menu">
+          <li>
+            <a href="index.html">
+              <small class="text-dark">01.</small> Descripción
+            </a>
+          </li>
+          <li>
+            <a href="dondeComer.html">
+              <small class="text-dark">02.</small> ¿Dónde comer?
+            </a>
+          </li>
+          <li>
+            <a href="hospedaje.html">
+              <small class="text-dark">03.</small> ¿Dónde dormir?
+            </a>
+          </li>
+          <li>
+            <a href="lugares_cercanos.html">
+              <small class="text-dark">04.</small> Lugares Cercanos
+            </a>
+          </li>
+          <li>
+            <a href="comollegar.html">
+              <small class="text-dark">05.</small> ¿Cómo llegar?
+            </a>
+          </li>
+          <li>
+            <a href="inspiraciones.html">
+              <small class="text-dark">06.</small> Inspiraciones
+            </a>
+          </li>
+          <li>
+            <a href="lugares.html" class="active">
+              <small>07.</small> <b>Más Lugares para visitar</b>
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+        <button class="sidebar-toggle-btn" id="sidebarToggle">☰</button>
+
         <main class="main-content">
-            <h1 class="fs-1 fw-bold mt-1">Lugares para Visitar</h1>
-            <div class="border-bottom-info mb-2">
-                <p class="text-info fs-3">En El Salvador</p>
+            <div class="container">
+                <div class="border-bottom-dark mb-3">
+                    <h1 class="text-dark">Lugares para Visitar</h1>
+                    <p class="text-success">Explora la belleza natural de El Salvador</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="card card-info card-hover">
+                            <img class="card-img" src="../img/espiritu.jpg" alt="El Espíritu de la montaña" />
+                            <div class="card-body text-center">
+                                <span class="card-title text-dark"><b>El Espíritu de la Montaña</b></span>
+                                <p class="card-text text-dark small mt-2">Explora las vistas más impresionantes de la zona oriental.</p>
+                                <a href="./espiritu.html" class="btn-solid-dark btn-md mt-2">Más Información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card card-info card-hover">
+                            <img class="card-img" src="../img/Lago.jpeg" alt="Lago de Coatepeque" />
+                            <div class="card-body text-center">
+                                <span class="card-title text-dark"><b>Lago de Coatepeque</b></span>
+                                <p class="card-text text-dark small mt-2">Uno de los lagos más hermosos del mundo en Santa Ana.</p>
+                                <a href="coatepeque-lake.html" class="btn-solid-dark btn-md mt-2">Más Información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card card-info card-hover">
+                            <img class="card-img" src="../img/el_pital.jpg" alt="Cerro El Pital" />
+                            <div class="card-body text-center">
+                                <span class="card-title text-dark"><b>Cerro El Pital</b></span>
+                                <p class="card-text text-dark small mt-2">El punto más alto de El Salvador, clima fresco y pinos.</p>
+                                <a href="pital.html" class="btn-solid-dark btn-md mt-2">Más Información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card card-info card-hover">
+                            <img class="card-img" src="../img/DestinationApaneca02.jpg" alt="Laberinto de Albania" />
+                            <div class="card-body text-center">
+                                <span class="card-title text-dark"><b>Laberinto de Albania</b></span>
+                                <p class="card-text text-dark small mt-2">Aventura y diversión en el laberinto natural de Apaneca.</p>
+                                <a href="laberinto.html" class="btn-solid-dark btn-md mt-2">Más Información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card card-info card-hover">
+                            <img class="card-img" src="../img/el-bosque.jpg" alt="Plaza El Bosque" />
+                            <div class="card-body text-center">
+                                <span class="card-title text-dark"><b>Plaza El Bosque</b></span>
+                                <p class="card-text text-dark small mt-2">Un espacio relajante rodeado de naturaleza y café.</p>
+                                <a href="plazaelbosque.html" class="btn-solid-dark btn-md mt-2">Más Información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card card-info card-hover">
+                            <img class="card-img" src="../img/ruta-panoramica-el-salvador.png" alt="Ruta Panorámica" />
+                            <div class="card-body text-center">
+                                <span class="card-title text-dark"><b>Ruta Panorámica</b></span>
+                                <p class="card-text text-dark small mt-2">Vistas espectaculares al Lago de Ilopango y volcanes.</p>
+                                <a href="rutapanoramica.html" class="btn-solid-dark btn-md mt-2">Más Información</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <section class="bg-info p-3 mb-1">
-              <div class="row">
-
-<!-- Card Epiritu -->
-<div class="col-12 col-md-4">
-    <div class="card card-img-top bg-light card-hover">
-  <img class="card-img" src="../img/espiritu.jpg" alt="..." />
-  <div class="card-body">
-    <p class="card-title text-center">El Espiritu de la montaña</p>
-    <br>
- <a href="./espiritu.html">    <button class="btn btn-md btn-muted text-center" >Para mas Información Aqui</button></a> 
- <br>
-    <br><br>
-  </div>
- 
-</div>
-</div>
-
-<!-- Card Lago de Cohatepeque -->
-<div class="col-12 col-md-4">
-    <div class="card card-img-top bg-light card-hover">
-  <img class="card-img" src="../img/Lago.jpeg" alt="..." />
-  <div class="card-body">
-    <p class="card-title text-center">Lago te Cohatepeque</p>
- <a href="coatepeque-lake.html"><button class="btn btn-md btn-muted text-center" >Para mas Información Aqui</button></a>  
-    <br><br>
-  </div>
-</div> 
-</div>
-
-<!-- Card El Pital -->
-<div class="col-12 col-md-4">
-    <div class="card card-img-top bg-light card-hover">
-  <img class="card-img" src="../img/el_pital.jpg" alt="..." />
-  <div class="card-body">
-    <p class="card-title text-center">Cerro El Pital</p>
-    <br>
- <a href="pital.html"><button class="btn btn-md btn-muted text-center" >Para mas Información Aqui</button></a>  
- <br><br>
-  </div>
-</div> 
-</div>  
-
-<!-- Card El Laberinto -->
-<div class="col-12 col-md-4">
-    <div class="card card-img-top bg-light card-hover">
-  <img class="card-img" src="../img/DestinationApaneca02.jpg" alt="..." />
-  <div class="card-body">
-    <p class="card-title text-center">Laberinto de Albania</p>
-    
- <a href="laberinto.html"><button class="btn btn-md btn-muted text-center" >Para mas Información Aqui</button></a>  
- <br><br>
-  </div>
-</div> 
-</div> 
-
-<!-- Plaza El Bosque -->
-<div class="col-12 col-md-4">
-    <div class="card card-img-top bg-light card-hover">
-  <img class="card-img" src="../img/el-bosque.jpg" alt="..." />
-  <div class="card-body">
-    <p class="card-title text-center">Plaza El Bosque</p>
-    <br>
-    
- <a href="plazaelbosque.html"><button class="btn btn-md btn-muted text-center" >Para mas Información Aqui</button></a>  
- <br><br>
-  </div>
-</div> 
-</div> 
-
-<!-- Ruta Panoramica-->
-<div class="col-12 col-md-4">
-    <div class="card card-img-top bg-light card-hover">
-  <img class="card-img" src="../img/ruta-panoramica-el-salvador.png" alt="..." />
-  <div class="card-body">
-    <p class="card-title text-center">Ruta Panoramica</p>
-    <br>
-    
- <a href="rutapanorámica.html"><button class="btn btn-md btn-muted text-center" >Para mas Información Aqui</button></a>  
- <br>
-  </div>
-</div> 
-</div> 
-
-
-
-
-
-
-</div>             
-</section>
-
-            <footer class="main-footer main-footer-dark  ">
+            <footer class="main-footer main-footer-dark mt-5">
                 <div class="footer-content text-center">
-                    <p class="fw-bold text-light mb-1 ">El Tunco Guide</p> 
-                    <p class="footer-copy">© 2026 Guía Turística Playa El Tunco.</p>     
+                    <span class="footer-brand">El Tunco Guide</span>
+                    <p class="footer-copy text-muted">© 2026 Guía Turística Playa El Tunco.</p>
                 </div>
             </footer>
-            </div>
-    
-    
+        </main>
+    </div>
 
     <script src="main.js"></script>
 </body>
